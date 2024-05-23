@@ -1,0 +1,255 @@
+:root {
+  --text : #DDE6ED;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0%;
+  height: 0%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.logo a{
+  text-decoration: none;
+  line-height: 80px;
+  color: #DDE6ED;
+  font-size: 35px;
+  margin: 0px 250px;
+  font-family:'Lexend';
+  letter-spacing: 1px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul li{
+  display: inline-block;
+  margin: 0 40px;
+  color: var(--text);
+  font-weight: 550;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family:'Lexend'
+}
+
+.toggle {
+  float: right;
+  margin-right: 30px;
+  /* line-height: 80px; */
+  font-size: 30px;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+.check {
+  display: none;
+}
+
+.landing-page-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 30px;
+  display: flex;
+  flex-grow: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  display: flex;  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'QuickSand';
+  color: var(--text);
+}
+
+.head p:first-child {
+  font-size: 80px;
+}
+
+.head p:nth-child(2) {
+  font-size: 110px;
+  font-family: 'Lexend';
+}
+.head p:last-child {
+  font-size: 50px;
+}
+
+
+.heading img {
+  height: 80vmin;
+  display: flex;
+  /* aspect-ratio: 1/1; */
+}
+.img-div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:800px) {
+  .logo a{
+    font-size: 20px;
+    margin: 0 50px;
+  }
+
+  nav ul li {
+    font-size: 18px;
+    margin: 0 20px;
+    line-height: 45px;
+  }
+  .toggle {
+    display: block;
+    background-color: transparent;
+  }
+
+  nav ul {
+    position: fixed;
+    padding: 20px;
+    background-color: rgba(255,255,255,.9);
+    width: 100%;
+    left: -100%;
+    top: 8%;
+    transition: all .3s;
+  }
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    color: black;
+  }
+
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .heading {
+    flex-wrap: wrap-reverse;
+  }
+
+  .heading {
+    justify-content: center;
+    align-items: center;
+  }
+  .head p:last-child {
+    margin-inline: 10%;
+    justify-content: center;
+    text-align: justify;
+  }
+  .head {
+    align-items: center;
+  }
+}
+
+
+
+
+/* Responsiveness for Mobiles */
+@media only screen and (max-width: 767px) {
+  .head p:first-child {
+    font-size: 20px;
+  }
+  .head p:nth-child(2) {
+    font-size: 30px;
+  }
+  .head p:last-child {
+    font-size: 18px;
+  }
+}
+
+
+/* Responsiveness for Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .head p:first-child {
+    font-size: 40px;
+  }
+  .head p:nth-child(2) {
+    font-size: 80px;
+  }
+  .head p:last-child {
+    font-size: 25px;
+  }
+}
+
+
+/* Responsiveness for Small Desktops */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .head p:first-child {
+    font-size: 45px;
+  }
+  .head p:nth-child(2) {
+    font-size: 85px;
+  }
+  .head p:last-child {
+    font-size: 30px;
+  }
+}
+
+
+/* Responsiveness for Medium Desktops */
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  .head p:first-child {
+    font-size: 45px;
+  }
+  .head p:nth-child(2) {
+    font-size: 85px;
+  }
+  .head p:last-child {
+    font-size: 30px;
+  }
+}
+
+
+/* Responsivesness for Large Desktops */
+@media only screen and (min-width: 1440px) and (max-width:2560px) {
+  .head img {
+    margin-top: 100px;
+  }
+  .head p:first-child{
+  font-size: 55px;
+ }
+
+ .head p:nth-child(2) {
+  font-size: 90px;
+ }
+ .head p:last-child {
+  font-size: 35px;
+ }
+} 
