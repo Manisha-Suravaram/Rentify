@@ -17,7 +17,7 @@ const Login = () => {
   const Signup = (e) => {
     e.preventDefault();
     if(pwd == cfpwd){
-      axios.post('http://localhost:8000/signup',{fname:fname, lname:lname,email:email,phone:phone,pwd:pwd,role:role})
+      axios.post('https://rentify-task-api.vercel.app/',{fname:fname, lname:lname,email:email,phone:phone,pwd:pwd,role:role})
       .then(res => {
         console.log(res.data)
         if(res.data.valid){
