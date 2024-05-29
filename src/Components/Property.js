@@ -9,7 +9,7 @@ const Property = () => {
   const [data,setData] = React.useState({})
   const [user,setUser] = React.useState({})
   React.useEffect(() => {
-    axios.post('http://localhost:8000/getproperty',{id:id,mail:sessionStorage.getItem('userMail')})
+    axios.post('https://rentify-task-api.vercel.app/',{id:id,mail:sessionStorage.getItem('userMail')})
     .then(res =>{
       console.log(res.data)
       setData(res.data.property[0])
