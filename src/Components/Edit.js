@@ -18,7 +18,7 @@ const PropertyForm = () => {
   });
 
   React.useEffect(() => {
-    axios.post('http://localhost:8000/getproperty',{id: id})
+    axios.post('https://rentify-task-api.vercel.app/',{id: id})
     .then(res =>{
         delete res.data.property[0]._id
         setFormData(res.data.property[0])
@@ -38,7 +38,7 @@ const PropertyForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Calling');
-    axios.post('http://localhost:8000/editproperty', {id:id,formData: formData})
+    axios.post('https://rentify-task-api.vercel.app/', {id:id,formData: formData})
       .then(response => {
         console.log('Property added:', response.data);
         // Reset form after successful submission
