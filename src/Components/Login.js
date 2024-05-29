@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate()
   const login = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8000/login', {uname:uname, pwd:pwd})
+    axios.post('https://rentify-task-api.vercel.app/', {uname:uname, pwd:pwd})
     .then(res => {
       console.log(res.data)
       if(res.data.valid){
