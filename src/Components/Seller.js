@@ -84,7 +84,7 @@ const AvailableProperties = () => {
     const navigate = useNavigate()
 
     const deleteData = (id) => {
-        axios.post('http://localhost:8000/delete',{id: id})
+        axios.post('https://rentify-task-api.vercel.app/',{id: id})
         .then(res =>{
             if(res.data === 'deleted'){
                 let newProperties = properties.filter(property => property._id !== id)
@@ -115,7 +115,7 @@ const AvailableProperties = () => {
     
 
     React.useEffect(() =>{
-        axios.post('http://localhost:8000/properties',{owner: localStorage.getItem('userMail')})
+        axios.post('https://rentify-task-api.vercel.app/',{owner: localStorage.getItem('userMail')})
         .then(res =>{
             setProperties(res.data)
             let rows = []
