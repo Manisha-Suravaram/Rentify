@@ -26,7 +26,7 @@ const PropertyForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/addproperties', formData)
+    axios.post('https://rentify-task-api.vercel.app/', formData)
       .then(response => {
         console.log('Property added:', response.data);
         // Reset form after successful submission
