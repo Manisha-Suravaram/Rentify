@@ -96,7 +96,7 @@ const AvailableProperties = () => {
   }, [navigate]);
 
   const likeit = (id) => {
-    axios.post('http://localhost:8000/like',{id: id,mail:localStorage.getItem('userMail')})
+    axios.post('https://rentify-task-api.vercel.app/',{id: id,mail:localStorage.getItem('userMail')})
     .then(res =>{
       setProperties(res.data)
             let rows = []
@@ -125,7 +125,7 @@ const AvailableProperties = () => {
 
 
   React.useEffect(() =>{
-    axios.post('http://localhost:8000/properties',{})
+    axios.post('https://rentify-task-api.vercel.app/',{})
     .then(res =>{
         setProperties(res.data)
         let rows = []
